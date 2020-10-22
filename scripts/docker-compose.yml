@@ -1,0 +1,15 @@
+version: '2'
+services:
+  postgres:
+    image: "library/postgres:9.5.2"
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: gokit_demo
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    driver: local
