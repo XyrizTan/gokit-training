@@ -1,0 +1,8 @@
+steps:
+- id: buildGoApp
+  name: 'gcr.io/viki-ci/vgo:1.14-1.0.0'
+  entrypoint: sh
+  args:
+    - '-c'
+    - |
+        vgo build ./...
